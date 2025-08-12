@@ -1,6 +1,6 @@
-var age = 13;
-var maxAge = 122;
-var numPerDay = 3;
-var totalNeeded = (numPerDay * 365) * (maxAge - age);
+var age = window.prompt("Enter your age in years:", "0");
+var maxAge = window.prompt("Enter the age you would want to live to in years:", "0");
+var numPerDay = window.prompt("Enter how many snacks you eat per day:", "0");
+var totalNeeded = (maxAge - age) * numPerDay;
 
-document.write("You will need " + totalNeeded + " sandwiches to last you until the ripe old age of " + maxAge + ".");
+document.write(`You need ${totalNeeded} snacks to last until the ripe old age of ${maxAge}`)
