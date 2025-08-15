@@ -1,0 +1,15 @@
+<html>
+    <body>
+        <label>What will be the content of your alert?
+            <input id="alertMessage" />
+        </label>
+
+        <button onclick="displayAlert()">Display Alert</button>
+    </body>
+    <script>
+        function displayAlert() {
+            var alertMessage = document.getElementById("alertMessage").value;
+            alert(alertMessage);
+        }
+    </script>
+</html>
