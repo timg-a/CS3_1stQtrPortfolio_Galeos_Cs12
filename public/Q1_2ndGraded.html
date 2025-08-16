@@ -15,16 +15,19 @@
     </label><br>
     <button onclick="totalMeal()">Accept Input</button><br>
 
-    <p>Total Meal: </p>
+    <p id="totalCost">Total Meal: </p>
     
 
     <script>
         function totalMeal() {
-              var price = document.getElementById("price").value;
-              var tip = document.getElementById("tip").value;
-              var serviceCharge = document.getElementById("serviceCharge").value;
+              let price = parseFloat(document.getElementById("price").value);
+              let tip = parseFloat(document.getElementById("tip").value);
+              let serviceCharge = parseFloat(document.getElementById("serviceCharge").value);
 
-              var totalCost = price + tip + ((serviceCharge / 100) * price);
+              let totalCost = price + tip + ((serviceCharge / 100) * price);
+              let totalCostStr = "Total Meal: " + totalCost.toString();
+              document.getElementById("totalCost").innerHTML = totalCostStr;
+
          
         }
     </script>
